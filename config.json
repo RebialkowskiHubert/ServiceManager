@@ -1,0 +1,21 @@
+{
+    "services":
+    [
+        {
+            "serviceName": "MySQL",
+            "serviceStatus": "Zatrzymany",
+            "cmdRun": "service mysql start",
+            "cmdKill": "service mysql stop",
+            "cmdRestart": "service mysql restart",
+            "cmdStatus": "service mysql status"
+        },
+        {
+            "serviceName": "Apache2",
+            "serviceStatus": "Zatrzymany",
+            "cmdRun": "service apache2 start",
+            "cmdKill": "service apache2 stop",
+            "cmdRestart": "service apache2 restart",
+            "cmdStatus": "service apache2 status"
+        }
+    ]
+}
