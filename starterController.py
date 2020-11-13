@@ -8,6 +8,7 @@ class StarterController:
     servicesList = []
 
     def getServices(self):
+        self.servicesList.clear()
         configList = self.loadConfig()
         if len(configList) == 0:
             return None
