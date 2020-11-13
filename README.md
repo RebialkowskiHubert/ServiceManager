@@ -1,6 +1,6 @@
 Service Manager
 ===============
-[![Current Version](https://img.shields.io/badge/version-0.1-green.svg)]
+[![Current Version](https://img.shields.io/badge/version-1.0-green.svg)]
 
 This is a simple application to manage service in your server.
 
