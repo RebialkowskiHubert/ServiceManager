@@ -6,11 +6,16 @@ from PyQt5.QtWidgets import QAction, QApplication, QDesktopWidget, QHBoxLayout, 
 from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import pyqtSlot
 
+from starterController import StarterController
+
 class ServiceStarter(QWidget):
 
     def __init__(self):
         super().__init__()
         self.initUI()
+
+        controller = StarterController()
+        services = controller.getServices()
 
 
     def initUI(self):
