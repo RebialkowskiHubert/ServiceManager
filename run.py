@@ -2,9 +2,10 @@
 
 import sys
 from starterController import StarterController
-from PyQt5.QtWidgets import QApplication, QDesktopWidget, QHBoxLayout, QLabel, QPushButton, QTableWidget, QTableWidgetItem, QWidget, QVBoxLayout
-from PyQt5.QtGui import QIcon
-from PyQt5.QtCore import pyqtSlot
+from PyQt6.QtWidgets import QApplication, QHBoxLayout, QLabel, QPushButton, QTableWidget, QTableWidgetItem, QWidget, QVBoxLayout
+from PyQt6.QtGui import QIcon
+from PyQt6.QtCore import pyqtSlot
+from PyQt6 import QtGui
 
 from starterController import StarterController
 
@@ -115,7 +116,7 @@ class ServiceStarter(QWidget):
 
     def centerWindow(self):
         qr = self.frameGeometry()
-        cp = QDesktopWidget().availableGeometry().center()
+        cp = QtGui.QGuiApplication.primaryScreen().availableGeometry().center()
         qr.moveCenter(cp)
         self.move(qr.topLeft())
 
@@ -125,7 +126,7 @@ def main():
     app = QApplication(sys.argv)
     start = ServiceStarter()
     start.show()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
 
 if __name__ == '__main__':
     main()
